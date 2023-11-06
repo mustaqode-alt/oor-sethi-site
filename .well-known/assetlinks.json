@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "dev.mustaq.oorsethi",
+    "sha256_cert_fingerprints":
+    ["5C:68:DC:16:39:51:0C:25:88:31:A8:DA:88:C1:96:31:0F:90:32:34:9A:70:97:FA:57:D7:12:0F:C2:36:D5:D2"]
+  }
+}]
