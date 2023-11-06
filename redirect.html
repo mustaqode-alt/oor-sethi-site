@@ -1,1 +1,42 @@
-<html><head><p>"REDIRECT</p></head></html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+        // URLs for your app on the App Store and Play Store
+        var appStoreUrl = 'https://apps.apple.com/app/idYOUR_APP_ID';
+        var playStoreUrl = 'https://play.google.com/store/apps/details?id=dev.mustaq.oorsethi';
+
+        // Function to detect iOS devices
+        function isIOS() {
+            return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        }
+
+        // Function to detect Android devices
+        function isAndroid() {
+            return /Android/.test(navigator.userAgent);
+        }
+
+        // Redirect based on the device
+        function redirectBasedOnDevice() {
+            if (isIOS()) {
+                window.location.replace(appStoreUrl);
+            } else if (isAndroid()) {
+                window.location.replace(playStoreUrl);
+            } else {
+                // If device is neither Android nor iOS, consider adding a default action
+                // For example, redirect to a landing page or show options for both stores
+            }
+        }
+
+        // Call the redirect function as soon as the script loads
+        redirectBasedOnDevice();
+    </script>
+</head>
+<body>
+    <p>Redirecting to the app store...</p>
+    <!-- Optional: Add links to both stores in case the JavaScript fails -->
+    <a href="https://apps.apple.com/app/idYOUR_APP_ID">iOS App Store</a>
+    <a href="https://play.google.com/store/apps/details?id=YOUR.PACKAGE.ID">Google Play Store</a>
+</body>
+</html>
